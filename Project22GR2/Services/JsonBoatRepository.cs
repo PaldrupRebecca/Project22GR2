@@ -71,6 +71,7 @@ namespace Project22GR2.Services
                         b.Type = boat.Type;
                         b.Length = boat.Length;
                         b.Width = boat.Width;
+                        b.Weight = boat.Weight;
                         b.Sail = boat.Sail;
                     }
                 }
