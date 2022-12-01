@@ -2,6 +2,7 @@
 
 namespace Project22GR2.Interfaces
 {
+    //Rebecca
     public interface IEventRepository
     {
         List<Event> GetAllEvents();

@@ -5,6 +5,7 @@ namespace Project22GR2.Helpers
 {
     public class JsonFileWriter
     {
+        // Luca
         public static void WritetoJsonBoats(List<Boat> boats, string jsonFileName)
         {
             using (FileStream outputStream = File.Create(jsonFileName))
@@ -36,7 +37,6 @@ namespace Project22GR2.Helpers
         //Rebecca
         public static void WritetoJsonEvents(List<Event> events, string jsonFileName)
         {
-            //using(FileStream outputStream =File.OpenWrite(jsonFileName))
             using (FileStream outputStream = File.Create(jsonFileName))
             {
                 var writter = new Utf8JsonWriter(outputStream, new JsonWriterOptions

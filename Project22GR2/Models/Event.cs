@@ -2,6 +2,7 @@
 
 namespace Project22GR2.Models
 {
+    //Rebecca
     public class Event
     {
         [Required(ErrorMessage = "The id of the event is required")]
