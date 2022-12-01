@@ -3,21 +3,19 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Project22GR2.Interfaces;
 using Project22GR2.Models;
 
-namespace Project22GR2.Pages.Events
+namespace Project22GR2.Pages.Boats
 {
-    //Rebecca
-    public class CreateEventModel : PageModel
+    public class CreateBoatModel : PageModel
     {
-        private IEventRepository _repo;
+        private IBoatRepository repo;
 
         [BindProperty]
-        public Event Event { get; set; }
+        public Boat Boat { get; set; }
 
-        public CreateEventModel(IEventRepository eventRepository)
+        public CreateBoatModel(IBoatRepository faboRepo)
         {
-            _repo = eventRepository;
+            repo = faboRepo;
         }
-
         public IActionResult OnGet()
         {
             return Page();
@@ -29,7 +27,7 @@ namespace Project22GR2.Pages.Events
             {
                 return Page();
             }
-            _repo.AddEvent(Event);
+            repo.AddBoat(Boat);
             return RedirectToPage("Index");
         }
     }

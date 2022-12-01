@@ -3,32 +3,34 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Project22GR2.Interfaces;
 using Project22GR2.Models;
 
-namespace Project22GR2.Pages.Events
+namespace Project22GR2.Pages.Boats
 {
-    //Rebecca
     public class IndexModel : PageModel
     {
-        private IEventRepository _repo;
+        private IBoatRepository _repo;
 
         [BindProperty]
         public string FilterCriteria { get; set; }
-        public List<Event> Events { get; private set; }
-
-        public IndexModel(IEventRepository eventRepository)
+        public List<Boat> Boats { get; private set; }
+        public IndexModel(IBoatRepository repo)
         {
-            _repo = eventRepository;
+            _repo = repo;
         }
+
+
         public void OnGet()
         {
-            Events = _repo.GetAllEvents();
+            Boats = _repo.GetAllBoats();
         }
 
         public void OnPost()
         {
             if (FilterCriteria != null)
-                Events = _repo.FilterEvents(FilterCriteria);
+                Boats = _repo.FilterBoats(FilterCriteria);
             else
-                Events = _repo.GetAllEvents();
+                Boats = _repo.GetAllBoats();
         }
+
+
     }
 }

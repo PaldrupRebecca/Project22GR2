@@ -6,30 +6,26 @@ using Project22GR2.Models;
 namespace Project22GR2.Pages.Events
 {
     //Rebecca
-    public class CreateEventModel : PageModel
+    public class DeleteEventModel : PageModel
     {
         private IEventRepository _repo;
 
         [BindProperty]
         public Event Event { get; set; }
 
-        public CreateEventModel(IEventRepository eventRepository)
+        public DeleteEventModel(IEventRepository eventRepository)
         {
             _repo = eventRepository;
         }
 
-        public IActionResult OnGet()
+        public void OnGet(int id)
         {
-            return Page();
+            Event = _repo.GetEvent(id);
         }
 
         public IActionResult OnPost()
         {
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
-            _repo.AddEvent(Event);
+            _repo.DeleteEvent(Event.Id);
             return RedirectToPage("Index");
         }
     }
