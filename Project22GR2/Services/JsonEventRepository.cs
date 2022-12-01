@@ -11,7 +11,7 @@ namespace Project22GR2.Services
         {
             List<Event> events = GetAllEvents();
             events.Add(ev);
-            JsonFileWriterEvents.WritetoJsonEvents(events, jsonFileName);
+            JsonFileWriter.WritetoJsonEvents(events, jsonFileName);
         }
 
         public void DeleteEvent(int id)
@@ -19,7 +19,7 @@ namespace Project22GR2.Services
             Event eventToDelete = GetEvent(id);
             List<Event> events = GetAllEvents();
             events.Remove(eventToDelete);
-            JsonFileWriterEvents.WritetoJsonEvents(events, jsonFileName);
+            JsonFileWriter.WritetoJsonEvents(events, jsonFileName);
         }
 
         public List<Event> FilterEvents(string filter)
@@ -37,7 +37,7 @@ namespace Project22GR2.Services
 
         public List<Event> GetAllEvents()
         {
-            return JsonFileReaderEvents.ReadJsonEvents(jsonFileName);
+            return JsonFileReader.ReadJsonEvents(jsonFileName);
         }
 
         public Event GetEvent(int id)
@@ -67,7 +67,7 @@ namespace Project22GR2.Services
                         e.Price = ev.Price;
                     }
                 }
-                JsonFileWriterEvents.WritetoJsonEvents(events, jsonFileName);
+                JsonFileWriter.WritetoJsonEvents(events, jsonFileName);
             }
         }
     }

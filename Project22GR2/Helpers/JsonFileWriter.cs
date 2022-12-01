@@ -31,6 +31,20 @@ namespace Project22GR2.Helpers
             }
         }
 
+        //Rebecca
+        public static void WritetoJsonEvents(List<Event> events, string jsonFileName)
+        {
+            //using(FileStream outputStream =File.OpenWrite(jsonFileName))
+            using (FileStream outputStream = File.Create(jsonFileName))
+            {
+                var writter = new Utf8JsonWriter(outputStream, new JsonWriterOptions
+                {
+                    SkipValidation = false,
+                    Indented = true,
+                });
+                JsonSerializer.Serialize<Event[]>(writter, events.ToArray());
+            }
+        }
     }
 
 }
