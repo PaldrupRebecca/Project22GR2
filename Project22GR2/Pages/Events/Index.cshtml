@@ -1,0 +1,44 @@
+﻿@page
+@model Project22GR2.Pages.Events.IndexModel
+@{
+    ViewData["Title"] = "Events";
+}
+
+<h1>List of events</h1>
+
+<form method="post">
+    <p>
+        Search: <input type="text" asp-for="@Model.FilterCriteria" />
+        <input type="submit" value="Search" />
+    </p>
+</form>
+
+<a asp-page="CreateEvent">Create a new event</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Date and time</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Events)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Description</td>
+                <td>@item.DateTime</td>
+                <td>@item.Price</td>
+                <td>
+                    <a asp-page="EditEvent" asp-route-id=@item.Id>Edit</a> |
+                    <a asp-page="DeleteEvent" asp-route-id=@item.Id>Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
