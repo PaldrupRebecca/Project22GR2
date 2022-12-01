@@ -7,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddTransient<IEventRepository, JsonEventRepository>();
 builder.Services.AddTransient<IMemberRepository, JsonMemberRepository>();
+builder.Services.AddTransient<IBoatRepository, JsonBoatRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
