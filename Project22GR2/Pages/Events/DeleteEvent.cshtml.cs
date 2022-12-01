@@ -5,6 +5,7 @@ using Project22GR2.Models;
 
 namespace Project22GR2.Pages.Events
 {
+    //Rebecca
     public class DeleteEventModel : PageModel
     {
         private IEventRepository _repo;
