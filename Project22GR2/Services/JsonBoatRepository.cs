@@ -1,7 +1,6 @@
 ﻿using Project22GR2.Helpers;
 using Project22GR2.Models;
 using Project22GR2.Interfaces;
-using RazorPagesEventMakerInClass22.Helpers;
 
 namespace Project22GR2.Services
 {

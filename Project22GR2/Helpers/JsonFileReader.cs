@@ -1,7 +1,7 @@
 ﻿using Project22GR2.Models;
 using System.Text.Json;
 
-namespace RazorPagesEventMakerInClass22.Helpers
+namespace Project22GR2.Helpers
 {
     public class JsonFileReader
     {
