@@ -47,6 +47,19 @@ namespace Project22GR2.Helpers
                 JsonSerializer.Serialize<Event[]>(writter, events.ToArray());
             }
         }
+
+        public static void WritetoJsonEmployees(List<Employee> employees, string jsonFileName)
+        {
+            using (FileStream outputStream = File.Create(jsonFileName))
+            {
+                var writer = new Utf8JsonWriter(outputStream, new JsonWriterOptions
+                {
+                    SkipValidation = false,
+                    Indented = true,
+                });
+                JsonSerializer.Serialize<Employee[]>(writer, employees.ToArray());
+            }
+        }
     }
 
 }

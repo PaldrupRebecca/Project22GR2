@@ -37,6 +37,14 @@ namespace Project22GR2.Helpers
             }
         }
         // Also add Reader for Event, Member, etc
+        public static List<Employee> ReadJsonEmployees(string jsonFileName)
+        {
+            using (var jsonFileReader = File.OpenText(jsonFileName))
+            {
+                string indata = jsonFileReader.ReadToEnd();
+                return JsonSerializer.Deserialize<List<Employee>>(indata);
+            }
+        }
     }
 
 }
