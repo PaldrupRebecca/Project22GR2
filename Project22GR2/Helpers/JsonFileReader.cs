@@ -5,6 +5,7 @@ namespace Project22GR2.Helpers
 {
     public class JsonFileReader
     {
+        // Luca
         public static List<Boat> ReadJsonBoats(string jsonFileName)
         {
             using (var jsonFileReader = File.OpenText(jsonFileName))
