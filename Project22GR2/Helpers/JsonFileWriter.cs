@@ -5,6 +5,7 @@ namespace Project22GR2.Helpers
 {
     public class JsonFileWriter
     {
+        // Luca
         public static void WritetoJsonBoats(List<Boat> boats, string jsonFileName)
         {
             using (FileStream outputStream = File.Create(jsonFileName))
