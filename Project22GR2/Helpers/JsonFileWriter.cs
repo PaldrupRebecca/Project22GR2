@@ -18,6 +18,8 @@ namespace Project22GR2.Helpers
             }
         }
 
+        
+        //Adam
         public static void WritetoJsonMembers(List<Member> members, string jsonFileName)
         {
             using (FileStream outputStream = File.Create(jsonFileName))

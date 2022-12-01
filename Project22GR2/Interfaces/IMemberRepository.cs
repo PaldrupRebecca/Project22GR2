@@ -2,6 +2,7 @@
 
 namespace Project22GR2.Interfaces
 {
+    //Adam
     public interface IMemberRepository
     {
         List<Member> GetAllMembers();

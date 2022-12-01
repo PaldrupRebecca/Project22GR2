@@ -4,6 +4,7 @@ using Project22GR2.Models;
 
 namespace Project22GR2.Services
 {
+    //Adam
     public class JsonMemberRepository : IMemberRepository
     {
 
