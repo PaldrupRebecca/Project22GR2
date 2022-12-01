@@ -1,7 +1,9 @@
-{
-  "Id": 1,
-  "Name": "Test",
-  "Description": "Test",
-  "DateTime": "2022-03-22T00:00:00",
-  "Price": 150.50
-}
+[
+  {
+    "Id": 1,
+    "Name": "Test1",
+    "Description": "Test1",
+    "DateTime": "2023-03-22T00:00:00",
+    "Price": 150
+  }
+]
