@@ -5,12 +5,5 @@
     "Description": "Test",
     "DateTime": "2022-12-30T17:00:00",
     "Price": 15
-  },
-  {
-    "Id": 15,
-    "Name": "Event",
-    "Description": "event event",
-    "DateTime": "2023-01-01T13:00:00",
-    "Price": 125.13
   }
 ]
