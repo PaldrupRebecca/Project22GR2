@@ -22,7 +22,7 @@ namespace Project22GR2.Models
         public double Width { get; set; }
 
         [Required]
-        [Range(typeof(int), "1", "1000", ErrorMessage = "Error. Width is outside of the interval.")]
+        [Range(typeof(int), "1", "1000", ErrorMessage = "Error. Weigth is outside of the interval.")]
         public int Weight { get; set; }
 
         public string Sail { get; set; }
