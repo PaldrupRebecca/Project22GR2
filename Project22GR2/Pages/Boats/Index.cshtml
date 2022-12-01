@@ -1,0 +1,53 @@
+﻿@page
+@model Project22GR2.Pages.Boats.IndexModel
+@using Project22GR2.Models
+@using Project22GR2.Interfaces
+@inject IBoatRepository repo
+@{
+    ViewData["Title"] = "Boats";
+}
+
+<h1>List of boats</h1>
+
+<form method="post">
+    <p>
+        Search: <input type="text" asp-for="@Model.FilterCriteria" />
+        <input type="submit" value="Search" />
+    </p>
+
+</form>
+<a asp-page="CreateBoat">Create a new Boat</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Type</th>
+            <th>Length</th>
+            <th>Width</th>
+            <th>Weight</th>
+            <th>Sail</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (Boat item in Model.Boats)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Type</td>
+                <td>@item.Length</td>
+                <td>@item.Width</td>
+                <td>@item.Weight</td>
+                <td>@item.Sail</td>
+                <td>
+                    <a asp-page="EditBoat" asp-route-id=@item.Id>Edit</a>|
+                    <a asp-page="DeleteBoat" asp-route-id=@item.Id>Delete</a>
+                </td>
+            </tr>
+
+
+
+        }
+    </tbody>
+</table>
