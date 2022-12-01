@@ -15,6 +15,8 @@ namespace Project22GR2.Helpers
             }
         }
 
+        
+        //Adam
         public static List<Member> ReadJsonMembers(string jsonFileName)
         {
             using (var jsonFileReader = File.OpenText(jsonFileName))

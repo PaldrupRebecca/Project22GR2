@@ -1,0 +1,46 @@
+﻿@page
+@model Project22GR2.Pages.Members.IndexModel
+@{
+}
+@{
+    ViewData["Title"] = "Members";
+}
+
+<h1>List of Members</h1>
+
+<form method="post">
+    <p>
+        Search: <input type="text" asp-for="@Model.FilterCriteria" />
+        <input type="submit" value="Search" />
+    </p>
+</form>
+
+<a asp-page="CreateMembers">Create a new member</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Email</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Members)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Address</td>
+                <td>@item.Email</td>
+                
+                <td>
+                    <a asp-page="EditMembers" asp-route-id=@item.Id>Edit</a> |
+                    <a asp-page="DeleteMembers" asp-route-id=@item.Id>Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

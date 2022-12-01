@@ -1,0 +1,19 @@
+﻿@page
+@model Project22GR2.Pages.Members.DeleteMemberModel
+@{
+    ViewData["Titel"] = "Delete Member";
+}
+<h1>Delete member</h1>
+
+<p>
+    <h2>Vil du slette dette medlem?</h2>
+    <h3>ID: @Model.Member.Id </h3>
+    <h3>Name: @Model.Member.Name</h3>
+    <form method="post">
+        <input asp-for="@Model.Member.Id" type="hidden" />
+        <input type="submit" value="Delete" />
+        <a asp-page="Index">Cancel</a>
+    </form>
+
+
+</p>
