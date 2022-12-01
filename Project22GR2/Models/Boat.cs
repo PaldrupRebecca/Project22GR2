@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Transactions;
 
+// Author: Luca
 // Author's comment: https://www.youtube.com/watch?v=ZXK427oXjn8
 
 namespace Project22GR2.Models

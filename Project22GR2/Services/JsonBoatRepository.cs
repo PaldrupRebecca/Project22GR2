@@ -2,6 +2,9 @@
 using Project22GR2.Models;
 using Project22GR2.Interfaces;
 
+// Author: Luca
+// Author's comment: I live in Spain but without the a
+
 namespace Project22GR2.Services
 {
     public class JsonBoatRepository : IBoatRepository
