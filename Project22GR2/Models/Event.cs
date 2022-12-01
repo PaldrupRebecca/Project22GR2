@@ -20,7 +20,7 @@ namespace Project22GR2.Models
         public DateTime DateTime { get; set; }
 
         [Required(ErrorMessage = "The price of the event is required")]
-        [Range(typeof(int), "0", "10000", ErrorMessage = "The price is too low or too high")]
+        [Range(typeof(double), "1", "10000", ErrorMessage = "The price is too low or too high")]
         public double Price { get; set; }
 
         public override bool Equals(object? obj)
