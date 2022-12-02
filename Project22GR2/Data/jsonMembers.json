@@ -10,5 +10,11 @@
     "Name": "testTest",
     "Address": "Test 2",
     "Email": "test@test2.test"
+  },
+  {
+    "Id": 3,
+    "Name": "Ny Test",
+    "Address": "Testvej1",
+    "Email": "testpr\u00F8ve@test.dk"
   }
 ]
