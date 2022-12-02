@@ -1,0 +1,51 @@
+﻿@page
+@model Project22GR2.Pages.Employees.IndexModel
+@using Project22GR2.Models
+@using Project22GR2.Interfaces
+@inject IEmployeeRepository repo
+@{
+    ViewData["Title"] = "Employees";
+}
+
+<h1>List of employees</h1>
+
+<form method="post">
+    <p>
+        Search: <input type="text" asp-for="@Model.FilterCriteria" />
+        <input type="submit" value="Search" />
+    </p>
+
+</form>
+<a asp-page="CreateEmployee">Create a new Employee</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>E-mail</th>
+            <th>Access Level</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (Employee item in Model.Employees)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Address</td>
+                <td>@item.Email</td>
+                <td>@item.AccessLevel</td>
+                <td>
+                    <a asp-page="EditEmployee" asp-route-id=@item.Id>Edit</a>|
+                    <a asp-page="DeleteEmployee" asp-route-id=@item.Id>Delete</a>
+                </td>
+            </tr>
+
+
+
+        }
+    </tbody>
+</table>
