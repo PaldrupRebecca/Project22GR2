@@ -30,6 +30,11 @@
                 <span asp-validation-for="Employee.Email" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="@Model.Employee.Password" class="control-label"></label>
+                <input asp-for="@Model.Employee.Password" class="control-label" />
+                <span asp-validation-for="Employee.Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="@Model.Employee.AccessLevel" class="control-label"></label>
                 <input asp-for="@Model.Employee.AccessLevel" class="control-label" />
                 <span asp-validation-for="Employee.AccessLevel" class="text-danger"></span>
