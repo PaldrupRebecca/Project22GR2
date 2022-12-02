@@ -22,6 +22,10 @@
                 <label asp-for="@Model.Member.Email" class="control-label"></label>
                 <input asp-for="@Model.Member.Email" class="control-label" />
             </div>
+            <div class="form-group">
+                <label asp-for="@Model.Member.Password" class="control-label"></label>
+                <input asp-for="@Model.Member.Password" class="control-label" />
+            </div>
 
             <div class="form-group">
                 <input type="submit" value="Save updated member" asp-page-handler="Edit" class="btn btn-primary" />
