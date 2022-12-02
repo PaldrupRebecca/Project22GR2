@@ -28,7 +28,7 @@ namespace Project22GR2.Pages.Members
                 return Page();
             }
             repo.AddMember(Member);
-            return RedirectToPage("Index");
+            return RedirectToPage("/HomePage/Index");
         }
     }
 }
