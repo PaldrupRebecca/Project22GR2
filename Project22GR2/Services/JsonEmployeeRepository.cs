@@ -6,7 +6,7 @@ namespace Project22GR2.Services
 {
     public class JsonEmployeeRepository : IEmployeeRepository
     {
-        string jsonFileName = @"Data\JsonEmployees.json";
+        string jsonFileName = @"Data\JsonEmployee.json";
         public void AddEmployee(Employee employees)
         {
             List<Employee> employee = GetAllEmployees();
