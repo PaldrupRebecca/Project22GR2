@@ -6,6 +6,8 @@ namespace Project22GR2.Models
     //Lavet af Adam
     public class Member
     {
+        [Required]
+        public string Password { get; set; }
 
         [Required]
         public int Id { get; set; }
@@ -19,8 +21,9 @@ namespace Project22GR2.Models
         [Required]
         public string Email { get; set; }
 
-        public Member(int id, string name, string address, string email)
+        public Member(string password, int id, string name, string address, string email)
         {
+            Password = password;
             Id = id;
             Name = name;
             Address = address;
