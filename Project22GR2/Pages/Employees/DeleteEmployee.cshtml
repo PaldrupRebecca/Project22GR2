@@ -1,0 +1,15 @@
+﻿@page
+@model Project22GR2.Pages.Employees.DeleteEmployeeModel
+@{
+    ViewData["Titel"] = "Delete Employee";
+}
+
+<h1>Delete boat</h1>
+<p>
+    <h2>Are you sure you want to remove employee @Model.Employee.Name with ID number @Model.Employee.Id from the database?</h2>
+    <form method="post">
+        <input asp-for="@Model.Employee.Id" type="hidden" />
+        <input type="submit" value="Delete" />
+        <a asp-page="Index">Cancel</a>
+    </form>
+</p>

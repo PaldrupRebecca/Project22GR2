@@ -1,0 +1,40 @@
+﻿@page
+@model Project22GR2.Pages.Events.EditEventModel
+@{
+    ViewData["Title"] = "Edit event";
+}
+<h1>Edit event</h1>
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <input asp-for="@Model.Event.Id" type="hidden" />
+            <div class="form-group">
+                <label asp-for="@Model.Event.Name" class="control-label"></label>
+                <input asp-for="@Model.Event.Name" class="control-label" />
+                <span asp-validation-for="Event.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Event.Description" class="control-label"></label>
+                <input asp-for="@Model.Event.Description" class="control-label" />
+                <span asp-validation-for="Event.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Event.DateTime" class="control-label"></label>
+                <input asp-for="@Model.Event.DateTime" class="control-label" />
+                <span asp-validation-for="Event.DateTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Event.Price" class="control-label"></label>
+                <input asp-for="@Model.Event.Price" class="control-label" />
+                <span asp-validation-for="Event.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save updated event"  asp-page-handler="Edit" class="btn btn-primary" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Delete event" asp-page-handler="Delete" class="btn btn-primary" />
+                <a asp-page="Index" class="btn btn-primary">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>

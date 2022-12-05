@@ -1,10 +1,11 @@
 ﻿using Project22GR2.Models;
 using System.Text.Json;
 
-namespace RazorPagesEventMakerInClass22.Helpers
+namespace Project22GR2.Helpers
 {
     public class JsonFileReader
     {
+        // Luca
         public static List<Boat> ReadJsonBoats(string jsonFileName)
         {
             using (var jsonFileReader = File.OpenText(jsonFileName))
@@ -14,7 +15,36 @@ namespace RazorPagesEventMakerInClass22.Helpers
             }
         }
 
+        
+        //Adam
+        public static List<Member> ReadJsonMembers(string jsonFileName)
+        {
+            using (var jsonFileReader = File.OpenText(jsonFileName))
+            {
+                string indata = jsonFileReader.ReadToEnd();
+                return JsonSerializer.Deserialize<List<Member>>(indata);
+            }
+        }
+
+
+        //Rebecca
+        public static List<Event> ReadJsonEvents(string jsonFileName)
+        {
+            using (var jsonFileReader = File.OpenText(jsonFileName))
+            {
+                string indata = jsonFileReader.ReadToEnd();
+                return JsonSerializer.Deserialize<List<Event>>(indata);
+            }
+        }
         // Also add Reader for Event, Member, etc
+        public static List<Employee> ReadJsonEmployees(string jsonFileName)
+        {
+            using (var jsonFileReader = File.OpenText(jsonFileName))
+            {
+                string indata = jsonFileReader.ReadToEnd();
+                return JsonSerializer.Deserialize<List<Employee>>(indata);
+            }
+        }
     }
 
 }

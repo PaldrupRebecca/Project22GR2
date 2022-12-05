@@ -1,7 +1,9 @@
 ﻿using Project22GR2.Helpers;
 using Project22GR2.Models;
 using Project22GR2.Interfaces;
-using RazorPagesEventMakerInClass22.Helpers;
+
+// Author: Luca
+// Author's comment: I live in Spain but without the a
 
 namespace Project22GR2.Services
 {

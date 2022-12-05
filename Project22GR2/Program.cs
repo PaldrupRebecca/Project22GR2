@@ -1,8 +1,14 @@
+using Project22GR2.Interfaces;
+using Project22GR2.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-
+builder.Services.AddTransient<IEventRepository, JsonEventRepository>();
+builder.Services.AddTransient<IMemberRepository, JsonMemberRepository>();
+builder.Services.AddTransient<IBoatRepository, JsonBoatRepository>();
+builder.Services.AddTransient<IEmployeeRepository, JsonEmployeeRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
