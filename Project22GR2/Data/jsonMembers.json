@@ -4,41 +4,55 @@
     "Id": 1,
     "Name": "Test",
     "Address": "Test 1",
-    "Email": "Test@test.test"
+    "Email": "Test@test.test",
+    "IsAdmin": true
   },
   {
     "Password": null,
     "Id": 2,
     "Name": "testTest",
     "Address": "Test 2",
-    "Email": "test@test2.test"
+    "Email": "test@test2.test",
+    "IsAdmin": true
   },
   {
     "Password": "test1234",
     "Id": 5,
     "Name": "Testtesttest",
     "Address": "testtesttest",
-    "Email": "Test@test.testtest"
+    "Email": "Test@test.testtest",
+    "IsAdmin": true
   },
   {
     "Password": null,
     "Id": 3,
     "Name": "Ny Test",
     "Address": "Testvej1",
-    "Email": "testpr\u00F8ve@test.dk"
+    "Email": "testpr\u00F8ve@test.dk",
+    "IsAdmin": false
   },
   {
     "Password": "wghoi4jh",
     "Id": 145,
     "Name": "ewgjwrj",
     "Address": "wrhnwiorjhipj",
-    "Email": "wrhjrwjg"
+    "Email": "wrhjrwjg",
+    "IsAdmin": false
   },
   {
     "Password": "egjkehuo4r",
     "Id": 89,
     "Name": "sdgebgbewh",
     "Address": "ewwnjghjkbj",
-    "Email": "eaj\u003Cjqghhjrh"
+    "Email": "eaj\u003Cjqghhjrh",
+    "IsAdmin": false
+  },
+  {
+    "Password": "lmfao",
+    "Id": 999,
+    "Name": "ur mom",
+    "Address": "owned",
+    "Email": "haha@gottem.lol",
+    "IsAdmin": false
   }
 ]
