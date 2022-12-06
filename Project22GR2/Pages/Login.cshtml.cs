@@ -29,7 +29,7 @@ namespace Project22GR2.Pages
         public IActionResult OnPost()
         {
             // Make a new employee, this is purposefully empty
-            Employee placeholderE = null;
+            Employee placeholderE = new Employee();
 
             // Looks for email in database
             foreach (Employee e in repo.GetAllEmployees())
@@ -39,8 +39,6 @@ namespace Project22GR2.Pages
                     placeholderE = e;
                     break;
                 }
-                else
-                    return Page();
             }
 
             // Checks password
