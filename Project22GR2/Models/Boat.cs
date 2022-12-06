@@ -33,5 +33,19 @@ namespace Project22GR2.Models
 
         }
 
+        public override bool Equals(object? obj)
+        {
+            if (obj == null)
+                return false;
+            else
+            {
+                Boat other = (Boat)obj;
+                if (other.Id == Id)
+                    return true;
+                else
+                    return false;
+            }
+        }
+
     }
 }
