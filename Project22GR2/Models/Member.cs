@@ -21,19 +21,24 @@ namespace Project22GR2.Models
         [Required]
         public string Email { get; set; }
 
-        public Member(string password, int id, string name, string address, string email)
+        [Required]
+        public bool IsAdmin { get; set; }
+
+        public Member(string password, int id, string name, string address, string email, bool isAdmin)
         {
             Password = password;
             Id = id;
             Name = name;
             Address = address;
             Email = email;
+            IsAdmin = isAdmin;
         }
 
         public Member()
         {
 
         }
+
         public override bool Equals(object? obj)
         {
             if (obj == null)

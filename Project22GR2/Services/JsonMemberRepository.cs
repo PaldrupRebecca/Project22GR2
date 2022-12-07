@@ -12,6 +12,7 @@ namespace Project22GR2.Services
         public void AddMember(Member members)
         {
             List<Member> member = GetAllMembers();
+            members.IsAdmin = false;
             member.Add(members);
             JsonFileWriter.WritetoJsonMembers(member, jsonFileName);
         }

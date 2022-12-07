@@ -31,9 +31,14 @@ namespace Project22GR2.Models
             {
                 Event other = (Event)obj;
                 if (other.Id == Id)
+                {
                     return true;
+                }
                 else
+                {
                     return false;
+                }
+                    
             }
         }
     }
