@@ -15,14 +15,6 @@ namespace Project22GR2.Helpers
             }
         }
 
-        //public static Member ReadJsonLogin(string jsonFileName)
-        //{
-        //    using (var jsonFileReader = File.OpenText(jsonFileName))
-        //    {
-        //        string indata = jsonFileReader.ReadToEnd();
-        //        return JsonSerializer.Deserialize<Member>(indata);
-        //    }
-        //}
 
         //Adam
         public static List<Member> ReadJsonMembers(string jsonFileName)
