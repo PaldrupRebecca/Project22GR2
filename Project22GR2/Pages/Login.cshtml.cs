@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Project22GR2.Services;
 using Project22GR2.Interfaces;
 using Project22GR2.Models;
+using Project22GR2.Helpers;
 
 namespace Project22GR2.Pages
 {
@@ -45,11 +46,14 @@ namespace Project22GR2.Pages
             if (placeholderM.Password == Member.Password)
             {
                 // Success
+                Member.Login(placeholderM);
                 return RedirectToPage("Index");
             }
             else
+            {
                 // No dice
                 return Page();
+            }
         }
     }
 }

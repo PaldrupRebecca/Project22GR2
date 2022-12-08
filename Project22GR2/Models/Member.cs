@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Project22GR2.Helpers;
+using System.ComponentModel.DataAnnotations;
 
 namespace Project22GR2.Models
 {
@@ -53,5 +54,20 @@ namespace Project22GR2.Models
             }
 
         }
+
+        // Luca
+        public void Login(Member member)
+        { 
+            List<Member> list = new List<Member>();
+            list.Add(member);
+            JsonFileWriter.WritetoJsonMembers(list, @"Data\JsonCurrentMember.json");
+        }
+
+        public void Logout()
+        {
+            List<Member> test = new List<Member>();
+            JsonFileWriter.WritetoJsonMembers(test, @"Data\JsonCurrentMember.json");
+        }
+
     }
 }

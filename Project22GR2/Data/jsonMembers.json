@@ -1,10 +1,10 @@
 [
   {
-    "Password": null,
+    "Password": "something",
     "Id": 1,
     "Name": "Test",
     "Address": "Test 1",
-    "Email": "Test@test.test",
+    "Email": "test@test.test",
     "IsAdmin": true
   },
   {
