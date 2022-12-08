@@ -12,5 +12,9 @@
             MemberId = memberId;
             EventId = eventId;
         }
+
+        public JoinEvent()
+        {
+        }
     }
 }
