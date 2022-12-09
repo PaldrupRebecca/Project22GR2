@@ -15,7 +15,7 @@ namespace Project22GR2.Helpers
             }
         }
 
-        
+
         //Adam
         public static List<Member> ReadJsonMembers(string jsonFileName)
         {
