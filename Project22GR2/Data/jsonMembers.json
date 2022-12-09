@@ -54,5 +54,13 @@
     "Address": "owned",
     "Email": "haha@gottem.lol",
     "IsAdmin": false
+  },
+  {
+    "Password": "1234",
+    "Id": 6,
+    "Name": "wegi",
+    "Address": "hrkejhiwr",
+    "Email": "qwe@rty.dk",
+    "IsAdmin": false
   }
 ]

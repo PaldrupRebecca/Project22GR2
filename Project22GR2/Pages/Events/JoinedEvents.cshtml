@@ -1,0 +1,32 @@
+﻿@page
+@model Project22GR2.Pages.Events.JoinedEventsModel
+@{
+    ViewData["Title"] = "Joined events";
+}
+
+<h1>List of events</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Member id</th>
+            <th>Event id</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.JoinEvents)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.MemberId</td>
+                <td>@item.EventId</td>
+@*                <td>
+                    <a asp-page="EditEvent" asp-route-id=@item.Id>Edit</a> |
+                    <a asp-page="DeleteEvent" asp-route-id=@item.Id>Delete</a> |
+                    <a asp-page="JoinEvent" asp-route-id=@item.Id>Join Event</a>
+                </td>*@
+            </tr>
+        }
+    </tbody>
+</table>

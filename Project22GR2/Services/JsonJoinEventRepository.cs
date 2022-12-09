@@ -11,21 +11,28 @@ namespace Project22GR2.Services
         public void AddJoinEvent(JoinEvent joinEvent)
         {
             List<JoinEvent> joinEvents = GetAllJoinEvents();
+            List<int> joinsIds = new List<int>();
+
+            foreach (var b in joinEvents)
+            {
+                joinsIds.Add(b.Id);
+            }
+            if (joinsIds.Count != 0)
+            {
+                int start = joinsIds.Max();
+                joinEvent.Id = start + 1;
+            }
+            else
+            {
+                joinEvent.Id = 1;
+            }
             joinEvents.Add(joinEvent);
             JsonFileWriter.WriteToJsonJoinEvents(joinEvents, jsonFileName);
         }
 
-        public void DeleteJoinEvent(int id)
+        public void DeleteJoinEvent(JoinEvent joinEvent)
         {
-            JoinEvent joinEventToDelete = GetJoinEvent(id);
-            List<JoinEvent> joinEvents = GetAllJoinEvents();
-            joinEvents.Remove(joinEventToDelete);
-            JsonFileWriter.WriteToJsonJoinEvents(joinEvents, jsonFileName);
-        }
 
-        public List<JoinEvent> FilterJoinEvents(string filter)
-        {
-            throw new NotImplementedException();
         }
 
         public List<JoinEvent> GetAllJoinEvents()
@@ -33,33 +40,20 @@ namespace Project22GR2.Services
             return JsonFileReader.ReadJsonJoinEvents(jsonFileName);
         }
 
-        public JoinEvent GetJoinEvent(int id)
+        public JoinEvent GetJoinEventById(int id)
         {
             List<JoinEvent> joinEvents = GetAllJoinEvents();
-            foreach (JoinEvent item in joinEvents)
+            foreach (JoinEvent j in joinEvents)
             {
-                if (item.Id == id)
-                    return item;
+                if (j.Id == id)
+                    return j;
             }
             return new JoinEvent();
         }
 
-        public void UpdateJoinEvent(JoinEvent joinEvent)
+        public List<JoinEvent> GetJoinEventByMemberId(int memberId)
         {
-            if (joinEvent != null)
-            {
-                List<JoinEvent> joinEvents = GetAllJoinEvents();
-                foreach (JoinEvent je in joinEvents)
-                {
-                    if (je.Id == joinEvent.Id)
-                    {
-                        je.Id = joinEvent.Id;
-                        je.MemberId = joinEvent.MemberId;
-                        je.EventId = je.EventId;
-                    }
-                }
-                JsonFileWriter.WriteToJsonJoinEvents(joinEvents, jsonFileName);
-            }
+            throw new NotImplementedException();
         }
     }
 }

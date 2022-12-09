@@ -14,6 +14,7 @@
 </form>
 
 <a asp-page="CreateEvent">Create a new event</a>
+<a asp-page="JoinedEvents">Joined events</a>
 
 <table class="table">
     <thead>
@@ -36,7 +37,8 @@
                 <td>@item.Price</td>
                 <td>
                     <a asp-page="EditEvent" asp-route-id=@item.Id>Edit</a> |
-                    <a asp-page="DeleteEvent" asp-route-id=@item.Id>Delete</a>
+                    <a asp-page="DeleteEvent" asp-route-id=@item.Id>Delete</a> |
+                    <a asp-page="JoinEvent" asp-route-id=@item.Id>Join Event</a>
                 </td>
             </tr>
         }
