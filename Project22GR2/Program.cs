@@ -2,7 +2,7 @@ using Project22GR2.Interfaces;
 using Project22GR2.Services;
 
 var builder = WebApplication.CreateBuilder(args);
-
+//Login til bruger er something og username er test@test.test
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddTransient<IEventRepository, JsonEventRepository>();
