@@ -6,7 +6,7 @@ namespace Project22GR2.Services
 {
     public class JsonJoinEventRepository : IJoinEventRepository
     {
-        string jsonFileName = @"Data\JsonJoinEvent.json";
+        string jsonFileName = @"Data\JsonJoinEvents.json";
 
         public void AddJoinEvent(JoinEvent joinEvent)
         {
