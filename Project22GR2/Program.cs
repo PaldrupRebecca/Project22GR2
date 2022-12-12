@@ -12,6 +12,7 @@ builder.Services.AddTransient<IEmployeeRepository, JsonEmployeeRepository>();
 builder.Services.AddTransient<IJoinEventRepository, JsonJoinEventRepository>();
 builder.Services.AddTransient<IBlogPostRepository, JsonBlogPostRepository>();
 builder.Services.AddSingleton<LoginService>();
+builder.Services.AddTransient<IBookingRepository, JsonBookingRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
