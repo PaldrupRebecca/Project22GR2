@@ -11,5 +11,6 @@ namespace Project22GR2.Interfaces
         void UpdateBoat(Boat boat);
         void DeleteBoat(int id);
         List<Boat> FilterBoats(string filter);
+        List<Boat> GetAllBoatsById(int id);
     }
 }

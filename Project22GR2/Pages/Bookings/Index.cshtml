@@ -1,0 +1,55 @@
+﻿@page
+@model Project22GR2.Pages.Bookings.BookingIndexModel
+@using Project22GR2.Interfaces
+@using Project22GR2.Models
+@inject IBookingRepository repo
+@{
+    ViewData["Title"] = "Booking oversigt";
+}
+<p>
+    Antal Lande @Model.Bookings.Count
+
+    <h1>List of Bookings</h1>
+    <form method="post">
+        <p>
+            Search_ <input type="text" asp-for=" @Model.FilterCriteria" />
+            <input type="submit" value="Search" />
+        </p>
+    </form>
+
+    <a asp-page="CreateBooking">Create a new Booking</a>
+
+    <h1>Bookingoversigt</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>BookingID</th>
+                <th>BoatID</th>
+                <th>MemberID</th>
+                <th>DateTime</th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (Booking item in Model.Bookings)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.BoatId</td>
+                    <td>@item.MemberId</td>
+                    <td>@item.DateTime</td>
+                    <td>
+                        @*<a asp-page="BookingBoats" asp-route-code=@item.Id>BookingBoats</a>
+                        <a asp-page="BookingMembers" asp-route-code=@item.Id>BookingMembers</a>*@
+                        <a asp-page="DeleteBooking" asp-route-id=@item.Id>Delete</a>
+                        <a asp-page="EditBooking" asp-route-id=@item.Id>Edit</a>
+                    </td>
+                </tr>
+
+
+
+            }
+        </tbody>
+    </table>
+</p>

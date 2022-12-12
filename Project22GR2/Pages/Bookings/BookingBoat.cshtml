@@ -1,0 +1,42 @@
+﻿@page
+@model Project22GR2.Pages.Bookings.BookingBoatModel
+@using Project22GR2.Models
+@using Project22GR2.Interfaces
+@inject IBoatRepository repo
+@{
+    ViewData["Title"] = "Booking boats";
+}
+
+<h1>Booked boats @Model.Booking.Id</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Type</th>
+            <th>Length</th>
+            <th>Width</th>
+            <th>Sail</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (Boat item in repo.GetAllBoatsById(Model.Booking.Id))
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Type</td>
+                <td>@item.Length</td>
+                <td>@item.Width</td>
+                <td>@item.Sail</td>
+                <td>
+                    <a asp-page="EditBoat" asp-route-id=@item.Id>Edit</a>|
+                    <a asp-page="DeleteBoat" asp-route-id=@item.Id>Delete</a>
+                </td>
+            </tr>
+
+
+
+        }
+    </tbody>
+</table>

@@ -98,5 +98,17 @@ namespace Project22GR2.Services
             // When done, returns the list
             return filteredList;
         }
+
+        public List<Boat> GetAllBoatsById(int id)
+        {
+            List<Boat> booBoats = new List<Boat>();
+            List<Boat> boats = GetAllBoats();
+            foreach (Boat b in boats)
+            {
+                if (b.Id == id)
+                    booBoats.Add(b);
+            }
+            return booBoats;
+        }
     }
 }

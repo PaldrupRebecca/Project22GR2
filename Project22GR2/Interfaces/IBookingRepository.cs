@@ -14,6 +14,6 @@ namespace Project22GR2.Interfaces
 
         void DeleteBooking(int id);
 
-        List<Booking> FilterBooking(string filter);
+        List<Booking> FilterBooking(int filter);
     }
 }

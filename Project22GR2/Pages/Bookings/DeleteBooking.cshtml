@@ -1,0 +1,17 @@
+﻿@page
+@model Project22GR2.Pages.Bookings.DeleteBookingModel
+@{
+    ViewData["Title"] = "Delete Booking";
+}
+<h1>Delete Booking</h1>
+
+<p>
+    <h2>Vil du slette denne Booking?</h2>
+    <form method="post">
+        <input asp-for="@Model.Booking.Id" />
+        <input type="submit" value="Delete" />
+        <a asp-page="Index">Cancel</a>
+    </form>
+
+
+</p>
