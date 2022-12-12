@@ -10,6 +10,7 @@ builder.Services.AddTransient<IMemberRepository, JsonMemberRepository>();
 builder.Services.AddTransient<IBoatRepository, JsonBoatRepository>();
 builder.Services.AddTransient<IEmployeeRepository, JsonEmployeeRepository>();
 builder.Services.AddTransient<IJoinEventRepository, JsonJoinEventRepository>();
+builder.Services.AddTransient<IBlogPostRepository, JsonBlogPostRepository>();
 builder.Services.AddSingleton<LoginService>();
 var app = builder.Build();
 
