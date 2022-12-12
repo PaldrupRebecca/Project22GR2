@@ -1,0 +1,40 @@
+﻿@page
+@using Project22GR2.Interfaces
+@using Project22GR2.Models
+@model Project22GR2.Pages.BlogPosts.IndexModel
+@inject IBlogPostRepository _repo;
+@{
+    ViewData["Title"] = "Vis Blog";
+}
+
+<h1>Blog Posts</h1>
+
+<a asp-page="CreateBlogPost">Create a new Blog Post</a>
+<p>Antal Posts @_repo.GetAllBlogPosts().Count</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>DateTime</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (BlogPost item in Model.BlogPosts)
+        {
+            <tr>
+                <td>
+                    <img src="~/images/BlogPostImages/@item.BlogPostImage" class="rounded-circle" width="80" height="70" />
+                </td>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Description</td>
+                <td>@item.DateTime</td>
+                <td>
+                    <a asp-page="DetailsBlogPost" asp-route-id=@item.Id>Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

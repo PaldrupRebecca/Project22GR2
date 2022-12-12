@@ -1,4 +1,5 @@
 ﻿using Project22GR2.Models;
+using System.CodeDom.Compiler;
 using System.Text.Json;
 
 namespace Project22GR2.Helpers
@@ -19,7 +20,7 @@ namespace Project22GR2.Helpers
             }
         }
 
-        
+
         //Adam
         public static void WritetoJsonMembers(List<Member> members, string jsonFileName)
         {
@@ -60,6 +61,18 @@ namespace Project22GR2.Helpers
                 JsonSerializer.Serialize<Employee[]>(writer, employees.ToArray());
             }
         }
+        // Daniel
+        public static void WriteToJsonBlogPost(List<BlogPost> BlogPost, string jsonFileName)
+        {
+            using (FileStream outputStream = File.Create(jsonFileName))
+            {
+                var writer = new Utf8JsonWriter(outputStream, new JsonWriterOptions
+                {
+                    SkipValidation = false,
+                    Indented = true
+                });
+                JsonSerializer.Serialize<BlogPost[]>(writer, BlogPost.ToArray());
+            }
+        }
     }
-
 }

@@ -1,0 +1,20 @@
+[
+  {
+    "Id": 1,
+    "Name": "test",
+    "Description": "testtesttest",
+    "DateTime": "2022-12-08T16:45:00"
+  },
+  {
+    "Id": 0,
+    "Name": null,
+    "Description": "Nej :)",
+    "DateTime": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "Name": "Daniel",
+    "Description": "Hej :)",
+    "DateTime": "0001-01-01T00:00:00"
+  }
+]

@@ -15,7 +15,7 @@ namespace Project22GR2.Helpers
             }
         }
 
-        
+
         //Adam
         public static List<Member> ReadJsonMembers(string jsonFileName)
         {
@@ -45,6 +45,14 @@ namespace Project22GR2.Helpers
                 return JsonSerializer.Deserialize<List<Employee>>(indata);
             }
         }
+        // Daniel
+        public static List<BlogPost> ReadJsonBlogPosts(string jsonFileName)
+        {
+            using (var jsonFileReader = File.OpenText(jsonFileName))
+            {
+                string indata = jsonFileReader.ReadToEnd();
+                return JsonSerializer.Deserialize<List<BlogPost>>(indata);
+            }
+        }
     }
-
 }
