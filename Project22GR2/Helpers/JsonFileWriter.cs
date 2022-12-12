@@ -74,5 +74,36 @@ namespace Project22GR2.Helpers
                 JsonSerializer.Serialize<Booking[]>(writer, bookings.ToArray());
             }
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // Daniel
+        public static void WriteToJsonBlogPost(List<BlogPost> BlogPost, string jsonFileName)
+        {
+            using (FileStream outputStream = File.Create(jsonFileName))
+            {
+                var writer = new Utf8JsonWriter(outputStream, new JsonWriterOptions
+                {
+                    SkipValidation = false,
+                    Indented = true
+                });
+                JsonSerializer.Serialize<BlogPost[]>(writer, BlogPost.ToArray());
+            }
+        }
+
+
     }
 }
