@@ -18,5 +18,9 @@ namespace Project22GR2.Services
         {
             return _loggedInMember;
         }
+        public bool IsLoggedMemberAdmin()
+        {
+            return _loggedInMember.IsAdmin;
+        }
     }
 }
