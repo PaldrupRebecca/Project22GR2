@@ -76,7 +76,23 @@ namespace Project22GR2.Helpers
                 return JsonSerializer.Deserialize<List<BlogPost>>(indata);
             }
         }
+        //Rebecca 
 
+        public static List<JoinEvent> ReadJsonJoinEvents(string jsonFileName)
+
+        {
+
+            using (var jsonFileReader = File.OpenText(jsonFileName))
+
+            {
+
+                string indata = jsonFileReader.ReadToEnd();
+
+                return JsonSerializer.Deserialize<List<JoinEvent>>(indata);
+
+            }
+
+        }
 
     }
 }
