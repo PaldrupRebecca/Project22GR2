@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Project22GR2.Helpers;
+using System.ComponentModel.DataAnnotations;
 
 namespace Project22GR2.Models
 {
@@ -21,19 +22,24 @@ namespace Project22GR2.Models
         [Required]
         public string Email { get; set; }
 
-        public Member(string password, int id, string name, string address, string email)
+        [Required]
+        public bool IsAdmin { get; set; }
+
+        public Member(string password, int id, string name, string address, string email, bool isAdmin)
         {
             Password = password;
             Id = id;
             Name = name;
             Address = address;
             Email = email;
+            IsAdmin = isAdmin;
         }
 
         public Member()
         {
 
         }
+
         public override bool Equals(object? obj)
         {
             if (obj == null)
@@ -48,5 +54,20 @@ namespace Project22GR2.Models
             }
 
         }
+
+        // Luca
+        public void Login(Member member)
+        { 
+            List<Member> list = new List<Member>();
+            list.Add(member);
+            JsonFileWriter.WritetoJsonMembers(list, @"Data\JsonCurrentMember.json");
+        }
+
+        public void Logout()
+        {
+            List<Member> test = new List<Member>();
+            JsonFileWriter.WritetoJsonMembers(test, @"Data\JsonCurrentMember.json");
+        }
+
     }
 }

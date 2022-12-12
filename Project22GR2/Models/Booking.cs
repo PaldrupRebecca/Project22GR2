@@ -1,19 +1,33 @@
-﻿namespace Project22GR2.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Project22GR2.Models
 {
     public class Booking
     {
         //Rebecca
+        [Required]
         public int Id { get; set; }
-        public Boat Boat { get; set; }
-        public Member Member { get; set; }
+
+        [Required]
+        public int BoatId { get; set; }
+        
+        [Required]
+        public int MemberId { get; set; }
+
+        [Required]
         public DateTime DateTime { get; set; }
 
-        public Booking(int id, Boat boat, Member member, DateTime dateTime)
+        public Booking(int id, int boatId, int memberId, DateTime dateTime)
         {
             Id = id;
-            Boat = boat;
-            Member = member;
+            BoatId = boatId;
+            MemberId = memberId;
             DateTime = dateTime;
+        }
+
+        public Booking()
+        {
+
         }
     }
 }

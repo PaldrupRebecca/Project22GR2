@@ -3,22 +3,23 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Project22GR2.Services;
 using Project22GR2.Interfaces;
 using Project22GR2.Models;
+using Project22GR2.Helpers;
 
 namespace Project22GR2.Pages
 {
     // Luca
-    // AS OF THIS CURRENT BUILD, ONLY EMPLOYEES CAN LOG IN
+    // AS OF THIS CURRENT BUILD, MEMBERS CAN LOG IN
 
     public class LoginModel : PageModel
     {
-        private IEmployeeRepository repo;
+        private IMemberRepository repo;
 
         [BindProperty]
-        public Employee Employee { get; set; }
+        public Member Member { get; set; }
 
-        public LoginModel(IEmployeeRepository faemRepo)
+        public LoginModel(IMemberRepository fameRepo)
         {
-            repo = faemRepo;
+            repo = fameRepo;
         }
 
         public IActionResult OnGet()
@@ -28,30 +29,31 @@ namespace Project22GR2.Pages
 
         public IActionResult OnPost()
         {
-            // Make a new employee, this is purposefully empty
-            Employee placeholderE = null;
+            // Make a new Member, this is purposefully empty
+            Member placeholderM = new Member();
 
             // Looks for email in database
-            foreach (Employee e in repo.GetAllEmployees())
+            foreach (Member m in repo.GetAllMembers())
             {
-                if (e.Email == Employee.Email)
+                if (m.Email == Member.Email)
                 {
-                    placeholderE = e;
+                    placeholderM = m;
                     break;
                 }
-                else
-                    return Page();
             }
 
             // Checks password
-            if (placeholderE.Password == Employee.Password)
+            if (placeholderM.Password == Member.Password)
             {
                 // Success
+                Member.Login(placeholderM);
                 return RedirectToPage("Index");
             }
             else
+            {
                 // No dice
                 return Page();
+            }
         }
     }
 }
