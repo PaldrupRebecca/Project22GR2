@@ -3,6 +3,7 @@ using Project22GR2.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 //Login til bruger er something og username er test@test.test
+//Alt login: email: qwe@rty.dk, password: 1234
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddTransient<IEventRepository, JsonEventRepository>();
