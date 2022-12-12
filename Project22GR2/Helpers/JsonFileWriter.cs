@@ -61,6 +61,26 @@ namespace Project22GR2.Helpers
                 JsonSerializer.Serialize<Employee[]>(writer, employees.ToArray());
             }
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         // Daniel
         public static void WriteToJsonBlogPost(List<BlogPost> BlogPost, string jsonFileName)
         {
