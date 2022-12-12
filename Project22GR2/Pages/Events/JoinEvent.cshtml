@@ -1,0 +1,18 @@
+﻿@page
+@model Project22GR2.Pages.Events.JoinEventModel
+@{
+    ViewData["Title"] = "Join Event";
+}
+<h1>Join Event</h1>
+<p>
+    <h2>Would you like to join this event?</h2>
+    <h5>Name: @Model.Event.Name</h5>
+    <h5>Description: @Model.Event.Description</h5>
+    <h5>Price: @Model.Event.Price kr</h5>
+    <h5>When: @Model.Event.DateTime</h5>
+    <form method="post">
+        <input asp-for="@Model.Event.Id" type="hidden" />
+        <input type="submit" value="Join event" class="btn btn-primary" />
+        <a asp-page="Index" class="btn btn-primary">Cancel</a>
+    </form>
+</p>

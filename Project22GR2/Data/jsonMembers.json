@@ -1,10 +1,10 @@
 [
   {
-    "Password": null,
+    "Password": "something",
     "Id": 1,
     "Name": "Test",
     "Address": "Test 1",
-    "Email": "Test@test.test",
+    "Email": "test@test.test",
     "IsAdmin": true
   },
   {
@@ -53,6 +53,14 @@
     "Name": "test25",
     "Address": "testvej99",
     "Email": "Test@test.test22",
+    "IsAdmin": false
+  },
+  {
+    "Password": "1234",
+    "Id": 6,
+    "Name": "wegi",
+    "Address": "hrkejhiwr",
+    "Email": "qwe@rty.dk",
     "IsAdmin": false
   }
 ]
