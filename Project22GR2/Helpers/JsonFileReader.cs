@@ -45,27 +45,7 @@ namespace Project22GR2.Helpers
                 return JsonSerializer.Deserialize<List<Employee>>(indata);
             }
         }
-       
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+              
         // Daniel
         public static List<BlogPost> ReadJsonBlogPosts(string jsonFileName)
         {

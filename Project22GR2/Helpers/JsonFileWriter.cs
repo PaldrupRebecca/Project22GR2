@@ -62,25 +62,6 @@ namespace Project22GR2.Helpers
             }
         }
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         // Daniel
         public static void WriteToJsonBlogPost(List<BlogPost> BlogPost, string jsonFileName)
         {
