@@ -21,6 +21,7 @@
                 <td>@item.Id</td>
                 <td>@item.MemberId</td>
                 <td>@item.EventId</td>
+                <td><a asp-page="SeeEvent" asp-route-id=@item.Id>View</a></td>
 @*                <td>
                     <a asp-page="EditEvent" asp-route-id=@item.Id>Edit</a> |
                     <a asp-page="DeleteEvent" asp-route-id=@item.Id>Delete</a> |
