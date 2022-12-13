@@ -40,6 +40,7 @@ namespace Project22GR2.Pages.Events
         public IActionResult OnPost()
         {
             JoinEvent.MemberId = _loginService.GetLoggedMember().Id;
+            JoinEvent.EventId = Event.Id;
             _joinEventRepository.AddJoinEvent(JoinEvent);
             return RedirectToPage("Index");
         }

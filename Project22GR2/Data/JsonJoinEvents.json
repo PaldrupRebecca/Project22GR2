@@ -13,5 +13,10 @@
     "Id": 3,
     "MemberId": 1,
     "EventId": 1
+  },
+  {
+    "Id": 4,
+    "MemberId": 6,
+    "EventId": 5
   }
 ]
