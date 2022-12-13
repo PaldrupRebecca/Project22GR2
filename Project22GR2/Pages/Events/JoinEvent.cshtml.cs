@@ -13,13 +13,14 @@ namespace Project22GR2.Pages.Events
         private LoginService _loginService;
         private IJoinEventRepository _joinEventRepository;
         public Member Member { get; set; }
+
+        [BindProperty]
         public Event Event { get; set; }
 
         public SelectList EventNames { get; set; }
 
         [BindProperty]
         public JoinEvent JoinEvent { get; set; }
-
 
         public JoinEventModel(IEventRepository eventRepo, LoginService loginService, IJoinEventRepository joinEventRepository)
         {
