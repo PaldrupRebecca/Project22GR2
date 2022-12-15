@@ -55,5 +55,18 @@ namespace Project22GR2.Services
         {
             throw new NotImplementedException();
         }
+
+        public List<JoinEvent> FilterJoinEvents(int memberId)
+        {
+            List<JoinEvent> filteredList = new List<JoinEvent>();
+            foreach (var item in GetAllJoinEvents())
+            {
+                if (item.MemberId == memberId)
+                {
+                    filteredList.Add(item);
+                }
+            }
+            return filteredList;
+        }
     }
 }

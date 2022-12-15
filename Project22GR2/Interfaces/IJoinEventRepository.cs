@@ -9,5 +9,6 @@ namespace Project22GR2.Interfaces
         JoinEvent GetJoinEventById(int id);
         List<JoinEvent> GetJoinEventByMemberId(int memberId);
         void DeleteJoinEvent(JoinEvent joinEvent);
+        List<JoinEvent> FilterJoinEvents(int memberId);
     }
 }

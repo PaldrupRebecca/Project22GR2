@@ -1,4 +1,17 @@
-{
-
-}
-
+[
+  {
+    "Id": 1,
+    "MemberId": 6,
+    "EventId": 1
+  },
+  {
+    "Id": 2,
+    "MemberId": 6,
+    "EventId": 1
+  },
+  {
+    "Id": 3,
+    "MemberId": 1,
+    "EventId": 1
+  }
+]

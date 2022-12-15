@@ -52,17 +52,21 @@
                         @{ if (LoginService.GetLoggedMember() != null)
                             {
                                         <li class="nav-item">
-                                            <a class="nav-link text-dark" asp-area="" asp-page="">Logout</a>
+                                            <a class="nav-link text-dark" asp-area="" asp-page="/Members/Logout">Logout</a>
                                         </li>
                                         <li class="nav-item"  class="float-right" style="font-size: medium">
                                             @LoginService.GetLoggedMember().Name
                                         </li>
+
                             }        
                             else 
                             {                
                                    
                                 <li class="nav-item">
                                     <a asp-page="/Members/Login" class="float-right btn btn-primary" style="font-size: medium">Log In</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a asp-page="/Members/CreateMember" class="float-right btn btn-primary" style="font-size: medium">Register</a>
                                 </li>
                             }
                         }
