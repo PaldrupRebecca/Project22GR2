@@ -53,8 +53,9 @@ namespace Project22GR2.Services
                 {
                     if (item.Id == blogPost.Id)
                     {
+                        item.Title = blogPost.Title;
                         item.Id = blogPost.Id;
-                        item.Name = blogPost.Name;
+                        item.Author = blogPost.Author;
                         item.Description = blogPost.Description;
                         item.Content = blogPost.Content;
                     }

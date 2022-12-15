@@ -10,8 +10,12 @@
         <form method="post">
             <input asp-for=@Model.BlogPost.Id type="hidden" />
             <div class="form-group">
-                <label asp-for="@Model.BlogPost.Name"></label>
-                <input asp-for="@Model.BlogPost.Name" />
+                <label asp-for="@Model.BlogPost.Title"></label>
+                <input asp-for="@Model.BlogPost.Title" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.BlogPost.Author"></label>
+                <input asp-for="@Model.BlogPost.Author" />
             </div>
             <div class="form-group">
                 <label asp-for="@Model.BlogPost.Description"></label>

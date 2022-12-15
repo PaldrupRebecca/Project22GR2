@@ -10,8 +10,8 @@
 
 <input asp-for=@Model.BlogPost.Id type="hidden" />
 <div class="form-group">
-    <label asp-for="@Model.BlogPost.Name"></label>
-    <input asp-for="@Model.BlogPost.Name" />
+    <label asp-for="@Model.BlogPost.Author"></label>
+    <input asp-for="@Model.BlogPost.Author" />
     <label asp-for="@Model.BlogPost.Description">Description</label>
     <input asp-for="@Model.BlogPost.Description" />
         <a asp-page="EditBlogPost" asp-route-id="@Model.BlogPost.Id">Edit</a> |
@@ -20,7 +20,9 @@
 </div>
 <div class="form-group">
     <center>
-        <label class="custom-control-label">Content:</label>
+        <label asp-for="@Model.BlogPost.Title"></label>
+        <input asp-for="@Model.BlogPost.Title" />
+        <label class="custom-control-label"></label>
         <textarea asp-for="@Model.BlogPost.Content" cols="120" rows="10" class="form-control"></textarea>
         <div class="container>">
             <img src="~/images/BlogPostImages/boats.jpg" class="rounded" alt="boats" width="350" hight="250" />
