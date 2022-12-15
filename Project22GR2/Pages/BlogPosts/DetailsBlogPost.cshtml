@@ -12,13 +12,18 @@
 <div class="form-group">
     <label asp-for="@Model.BlogPost.Name"></label>
     <input asp-for="@Model.BlogPost.Name" />
-</div>
-<label asp-for="@Model.BlogPost.Description"></label>
-<input asp-for="@Model.BlogPost.Description" />
-<div class="form-group">
-    <a asp-page="EditBlogPost">Edit</a>
-    <a asp-page="DeleteBlogPost">Delete</a>
-</div>
-<div>
+    <label asp-for="@Model.BlogPost.Description">Description</label>
+    <input asp-for="@Model.BlogPost.Description" />
+        <a asp-page="EditBlogPost" asp-route-id="@Model.BlogPost.Id">Edit</a> |
+        <a asp-page="DeleteBlogPost" asp-route-id="@Model.BlogPost.Id">Delete</a> |
     <a asp-page="Index">Back</a>
+</div>
+<div class="form-group">
+    <center>
+        <label class="custom-control-label">Content:</label>
+        <textarea asp-for="@Model.BlogPost.Content" cols="120" rows="10" class="form-control"></textarea>
+        <div class="container>">
+            <img src="~/images/BlogPostImages/boats.jpg" class="rounded" alt="boats" width="350" hight="250" />
+        </div>
+    </center>
 </div>

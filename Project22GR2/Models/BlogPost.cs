@@ -9,8 +9,10 @@ namespace Project22GR2.Models
         public string Name { get; set; }
         [Required(ErrorMessage = "Blog Posts must contain a description")]
         public string Description { get; set; }
+        public string Content { get; set; }
         public DateTime DateTime { get; set; }
-        public override bool Equals(object? obj)
+        public string BlogPostImage { get; set; }
+        public override bool Equals(object? obj) 
         {
             if (obj == null)
                 return false;

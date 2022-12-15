@@ -23,11 +23,26 @@ namespace Project22GR2.Services
             }
             return new BlogPost();
         }
-        public void AddBlogPost(BlogPost blog)
+        public void AddBlogPost(BlogPost blogPost)
         {
-            List<BlogPost> blogPost = GetAllBlogPosts();
-            blogPost.Add(blog);
-            JsonFileWriter.WriteToJsonBlogPost(blogPost, jsonFileName);
+            List<BlogPost> blogPosts = GetAllBlogPosts();
+            List<int> blogPostIds = new List<int>();
+
+            foreach (var bp in blogPosts)
+            {
+                blogPostIds.Add(bp.Id);
+            }
+            if (blogPostIds.Count != 0)
+            {
+                int start = blogPostIds.Max();
+                blogPost.Id = start + 1;
+            }
+            else
+            {
+                blogPost.Id = 1;
+            }
+            blogPosts.Add(blogPost);
+            JsonFileWriter.WriteToJsonBlogPost(blogPosts, jsonFileName);
         }
         public void UpdateBlogPost(BlogPost blogPost)
         {
@@ -41,6 +56,7 @@ namespace Project22GR2.Services
                         item.Id = blogPost.Id;
                         item.Name = blogPost.Name;
                         item.Description = blogPost.Description;
+                        item.Content = blogPost.Content;
                     }
                 }
                 JsonFileWriter.WriteToJsonBlogPost(blogPosts, jsonFileName);
