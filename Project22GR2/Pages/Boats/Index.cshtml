@@ -43,11 +43,20 @@
                 <td>@item.Width</td>
                 <td>@item.Weight</td>
                 <td>@item.Sail</td>
-                <td>
-                    <a asp-page="EditBoat" asp-route-id=@item.Id>Edit</a>|
-                    <a asp-page="DeleteBoat" asp-route-id=@item.Id>Delete</a>
-                    <a asp-page="Booking" asp-route-id=@item.Id>Book Boat</a>
-                </td>
+                @if (LoginService.IsLoggedMemberAdmin())
+                {
+                    <td>
+                        <a asp-page="EditBoat" asp-route-id=@item.Id>Edit</a> |
+                        <a asp-page="DeleteBoat" asp-route-id=@item.Id>Delete</a> |
+                        <a asp-page="Booking" asp-route-id=@item.Id>Book Boat</a>
+                    </td>
+                }
+                else if (LoginService.GetLoggedMember() != null)
+                {
+                    <td>
+                        <a asp-page="Booking" asp-route-id=@item.Id>Book Boat</a>
+                    </td>
+                }
             </tr>
 
 

@@ -54,11 +54,20 @@
     "BlogPostImage": null
   },
   {
-    "Title": "I like boats",
+    "Title": null,
     "Id": 9,
-    "Author": "Totally a Boat Lover",
-    "Description": "Boats \u003C3",
-    "Content": "fijoajefioawdkawd",
+    "Author": null,
+    "Description": null,
+    "Content": "Boats!",
+    "DateTime": "0001-01-01T00:00:00",
+    "BlogPostImage": null
+  },
+  {
+    "Title": "123",
+    "Id": 10,
+    "Author": null,
+    "Description": null,
+    "Content": null,
     "DateTime": "0001-01-01T00:00:00",
     "BlogPostImage": null
   }
