@@ -4,7 +4,7 @@
     "Id": 3,
     "Author": null,
     "Description": "Boats?",
-    "Content": "Boats Boats Boats",
+    "Content": "Boats Boats Boats :)",
     "DateTime": "0001-01-01T00:00:00",
     "BlogPostImage": null
   },
@@ -50,6 +50,15 @@
     "Author": "Mr. Boats",
     "Description": "Boats?",
     "Content": "Boats!",
+    "DateTime": "0001-01-01T00:00:00",
+    "BlogPostImage": null
+  },
+  {
+    "Title": "I like boats",
+    "Id": 9,
+    "Author": "Totally a Boat Lover",
+    "Description": "Boats \u003C3",
+    "Content": "fijoajefioawdkawd",
     "DateTime": "0001-01-01T00:00:00",
     "BlogPostImage": null
   }
