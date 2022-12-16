@@ -20,7 +20,10 @@ namespace Project22GR2.Services
         }
         public bool IsLoggedMemberAdmin()
         {
-            return _loggedInMember.IsAdmin;
+            if (_loggedInMember == null)
+                return false;
+            else
+                return _loggedInMember.IsAdmin;
         }
     }
 }
