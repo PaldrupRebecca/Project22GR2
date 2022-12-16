@@ -62,5 +62,13 @@
     "Address": "hrkejhiwr",
     "Email": "qwe@rty.dk",
     "IsAdmin": false
+  },
+  {
+    "Password": "a",
+    "Id": 999,
+    "Name": "a",
+    "Address": "a",
+    "Email": "a",
+    "IsAdmin": false
   }
 ]
