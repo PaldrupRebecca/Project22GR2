@@ -45,7 +45,7 @@
                         <a asp-page="JoinEvent" asp-route-id=@item.Id>Join Event</a>
                     </td>
                 }
-                else if (LoginService.GetLoggedMember != null)
+                else if (LoginService.GetLoggedMember() != null)
                 {
                     <td>
                         <a asp-page="JoinEvent" asp-route-id=@item.Id>Join Event</a>
