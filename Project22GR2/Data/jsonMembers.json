@@ -56,11 +56,19 @@
     "IsAdmin": false
   },
   {
-    "Password": "something",
-    "Id": 2,
-    "Name": "GammelTest",
-    "Address": "T1",
-    "Email": "test@test.test222",
+    "Password": "a",
+    "Id": 999,
+    "Name": "a",
+    "Address": "a",
+    "Email": "a",
+    "IsAdmin": false
+  },
+  {
+    "Password": "1",
+    "Id": 89,
+    "Name": "1",
+    "Address": "1",
+    "Email": "1",
     "IsAdmin": false
   }
 ]

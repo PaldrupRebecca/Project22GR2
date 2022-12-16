@@ -54,19 +54,7 @@ namespace Project22GR2.Helpers
                 return JsonSerializer.Deserialize<List<Booking>>(indata);
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
+       
         // Daniel
         public static List<BlogPost> ReadJsonBlogPosts(string jsonFileName)
         {
@@ -86,6 +74,5 @@ namespace Project22GR2.Helpers
                 return JsonSerializer.Deserialize<List<JoinEvent>>(indata);
             }
         }
-
     }
 }

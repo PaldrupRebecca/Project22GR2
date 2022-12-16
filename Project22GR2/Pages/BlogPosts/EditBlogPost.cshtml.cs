@@ -23,10 +23,5 @@ namespace Project22GR2.Pages.BlogPosts
             _repo.UpdateBlogPost(BlogPost);
             return RedirectToPage("Index");
         }
-        public IActionResult OnPostDelete()
-        {
-            _repo.DeleteBlogPost(BlogPost.Id);
-            return RedirectToPage("Index");
-        }
     }
 }
