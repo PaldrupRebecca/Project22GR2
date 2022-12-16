@@ -58,5 +58,11 @@
     "BoatId": 132,
     "MemberId": 1,
     "DateTime": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 13,
+    "BoatId": 132,
+    "MemberId": 1,
+    "DateTime": "0001-01-01T00:00:00"
   }
 ]
