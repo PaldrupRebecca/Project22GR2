@@ -40,14 +40,6 @@
     "IsAdmin": false
   },
   {
-    "Password": "egjkehuo4r",
-    "Id": 89,
-    "Name": "sdgebgbewh",
-    "Address": "e",
-    "Email": "eaj\u003Cjqghhjrh",
-    "IsAdmin": false
-  },
-  {
     "Password": "55",
     "Id": 77,
     "Name": "test25",
@@ -61,6 +53,14 @@
     "Name": "wegi",
     "Address": "hrkejhiwr",
     "Email": "qwe@rty.dk",
+    "IsAdmin": false
+  },
+  {
+    "Password": "something",
+    "Id": 2,
+    "Name": "GammelTest",
+    "Address": "T1",
+    "Email": "test@test.test222",
     "IsAdmin": false
   }
 ]

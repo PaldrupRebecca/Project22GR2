@@ -17,6 +17,7 @@
 
 </form>
 <a asp-page="CreateBoat">Create a new Boat</a>
+<a asp-page="Bookings">Booked Boats</a>
 
 <table class="table">
     <thead>
@@ -43,6 +44,7 @@
                 <td>
                     <a asp-page="EditBoat" asp-route-id=@item.Id>Edit</a>|
                     <a asp-page="DeleteBoat" asp-route-id=@item.Id>Delete</a>
+                    <a asp-page="Booking" asp-route-id=@item.Id>Book Boat</a>
                 </td>
             </tr>
 

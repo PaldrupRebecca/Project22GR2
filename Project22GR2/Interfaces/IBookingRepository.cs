@@ -10,10 +10,9 @@ namespace Project22GR2.Interfaces
 
         void AddBooking(Booking booking);
 
-        void UpdateBooking(Booking booking);
-
         void DeleteBooking(int id);
 
-        List<Booking> FilterBooking(int filter);
+        List<Booking> FilterBooking(int memberId);
+
     }
 }

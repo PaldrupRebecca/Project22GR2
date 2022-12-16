@@ -1,0 +1,20 @@
+﻿@page
+@model Project22GR2.Pages.Boats.BookingModel
+@{
+    ViewData["Title"] = "Book Boat";
+}
+<h1>Book Boat</h1>
+<p>
+    <h2>Would you like to Book this boat?</h2>
+    <h5>Type: @Model.Boat.Type</h5>
+    <h5>Length: @Model.Boat.Length</h5>
+    <h5>Whidth: @Model.Boat.Width</h5>
+    <h5>Weight: @Model.Boat.Weight</h5>
+    <h5>Sail: @Model.Boat.Sail</h5>
+    <form method="post">
+        <input asp-for="@Model.Boat.Id" type="hidden" />
+        <input type="submit" value="Book boat" class="btn btn-primary" />
+        <a asp-page="Index" class="btn btn-primary">Cancel</a>
+    </form>
+</p>
+
