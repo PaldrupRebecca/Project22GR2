@@ -1,5 +1,7 @@
 ﻿@page
 @using Project22GR2.Models
+@using Project22GR2.Services
+@inject LoginService LoginService
 @model Project22GR2.Pages.Members.IndexModel
 @{
 }
@@ -36,11 +38,13 @@
                 <td>@item.Name</td>
                 <td>@item.Address</td>
                 <td>@item.Email</td>
-                
-                <td>
-                    <a asp-page="EditMember" asp-route-id=@item.Id>Edit</a> |
-                    <a asp-page="DeleteMember" asp-route-id=@item.Id>Delete</a>
-                </td>
+                @if (LoginService.IsLoggedMemberAdmin())
+                {
+                    <td>
+                        <a asp-page="EditMember" asp-route-id=@item.Id>Edit</a> |
+                        <a asp-page="DeleteMember" asp-route-id=@item.Id>Delete</a>
+                    </td>
+                }
             </tr>
         }
     </tbody>
