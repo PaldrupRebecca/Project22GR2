@@ -1,0 +1,16 @@
+﻿@page
+@model Project22GR2.Pages.Events.SeeEventModel
+@{
+    ViewData["Title"] = "View Event";
+}
+<h1>Event</h1>
+<p>
+    <h2>@Model.Event.Name</h2>
+    <h5>Description: @Model.Event.Description</h5>
+    <h5>Price: @Model.Event.Price kr</h5>
+    <h5>When: @Model.Event.DateTime</h5>
+    <form method="post">
+        <a asp-page="JoinedEvents" class="btn btn-primary">Go back</a>
+    </form>
+</p>
+
