@@ -1,20 +1,74 @@
 [
   {
-    "Id": 1,
-    "Name": "test",
-    "Description": "testtesttest",
-    "DateTime": "2022-12-08T16:45:00"
+    "Title": "BoatsBoatsBoats",
+    "Id": 3,
+    "Author": null,
+    "Description": "Boats?",
+    "Content": "Boats Boats Boats :)",
+    "DateTime": "0001-01-01T00:00:00",
+    "BlogPostImage": null
   },
   {
-    "Id": 0,
-    "Name": null,
-    "Description": "Nej :)",
-    "DateTime": "0001-01-01T00:00:00"
+    "Title": null,
+    "Id": 4,
+    "Author": null,
+    "Description": "testtesttest/4",
+    "Content": null,
+    "DateTime": "0001-01-01T00:00:00",
+    "BlogPostImage": null
   },
   {
-    "Id": 0,
-    "Name": "Daniel",
+    "Title": null,
+    "Id": 5,
+    "Author": null,
+    "Description": "123",
+    "Content": null,
+    "DateTime": "0001-01-01T00:00:00",
+    "BlogPostImage": null
+  },
+  {
+    "Title": null,
+    "Id": 6,
+    "Author": null,
     "Description": "Hej :)",
-    "DateTime": "0001-01-01T00:00:00"
+    "Content": null,
+    "DateTime": "0001-01-01T00:00:00",
+    "BlogPostImage": null
+  },
+  {
+    "Title": null,
+    "Id": 7,
+    "Author": null,
+    "Description": "Hej :)",
+    "Content": "Testtest enTesttest toTesttest heheTesttestTesttest",
+    "DateTime": "0001-01-01T00:00:00",
+    "BlogPostImage": null
+  },
+  {
+    "Title": "BoatsBoatsBoats",
+    "Id": 8,
+    "Author": "Mr. Boats",
+    "Description": "Boats?",
+    "Content": "Boats!",
+    "DateTime": "0001-01-01T00:00:00",
+    "BlogPostImage": null
+  },
+  {
+    "Title": null,
+    "Id": 9,
+    "Author": null,
+    "Description": null,
+    "Content": "Boats!",
+    "DateTime": "0001-01-01T00:00:00",
+    "BlogPostImage": null
+  },
+  {
+    "Title": "123",
+    "Id": 10,
+    "Author": null,
+    "Description": null,
+    "Content": null,
+    "DateTime": "0001-01-01T00:00:00",
+    "BlogPostImage": null
   }
 ]

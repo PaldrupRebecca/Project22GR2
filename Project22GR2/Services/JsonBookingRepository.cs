@@ -12,6 +12,21 @@ namespace Project22GR2.Services
         public void AddBooking(Booking booking)
         {
             List<Booking> bookings = GetAllBookings();
+            List<int> ids = new List<int>();
+
+            foreach (var b in bookings)
+            {
+                ids.Add(b.Id);
+            }
+            if (ids.Count != 0)
+            {
+                int start = ids.Max();
+                booking.Id = start + 1;
+            }
+            else
+            {
+                booking.Id = 1;
+            }
             bookings.Add(booking);
             JsonFileWriter.WriteToJsonBookings(bookings, jsonFileName);
         }
@@ -24,19 +39,20 @@ namespace Project22GR2.Services
             JsonFileWriter.WriteToJsonBookings(bookings, jsonFileName);
         }
 
-        public List<Booking> FilterBooking(int filter)
+        public List<Booking> FilterBooking(int memberId)
         {
-            throw new NotImplementedException();
-            //List<Booking> filteredList = new List<Booking>();
-            //foreach (Booking item in GetAllBookings())
-            //{
-            //    if (item.BoatId = filter || item.MemberId = filter || item.DateTime = filter)
-            //    {
-            //        filteredList.Add(item);
-            //    }
-            //}
-            //return filteredList;
+            List<Booking> filteredList = new List<Booking>();
+            foreach (var item in GetAllBookings())
+            {
+                if (item.MemberId == memberId)
+                {
+                    filteredList.Add(item);
+                }
+            }
+            return filteredList;
         }
+
+
 
         public List<Booking> GetAllBookings()
         {
@@ -54,25 +70,6 @@ namespace Project22GR2.Services
                 }
             }
             return new Booking();
-        }
-
-        public void UpdateBooking(Booking booking)
-        {
-            if (booking != null)
-            {
-                List<Booking> bookings = GetAllBookings();
-                foreach (Booking b in bookings)
-                {
-                    if (b.Id == booking.Id)
-                    {
-                        b.Id = booking.Id;
-                        b.BoatId = booking.BoatId;
-                        b.MemberId = booking.MemberId;
-                        b.DateTime = booking.DateTime;
-                    }
-                }
-                JsonFileWriter.WriteToJsonBookings(bookings, jsonFileName);
-            }
         }
     }
 }

@@ -3,8 +3,7 @@
 namespace Project22GR2.Models
 {
     public class Booking
-    {
-        //Rebecca
+    {        
         [Required]
         public int Id { get; set; }
 
@@ -17,17 +16,17 @@ namespace Project22GR2.Models
         [Required]
         public DateTime DateTime { get; set; }
 
-        public Booking(int id, int boatId, int memberId, DateTime dateTime)
-        {
-            Id = id;
-            BoatId = boatId;
-            MemberId = memberId;
-            DateTime = dateTime;
-        }
+        //public Booking(int id, int boatId, int memberId, DateTime dateTime)
+        //{
+        //    Id = id;
+        //    BoatId = boatId;
+        //    MemberId = memberId;
+        //    DateTime = dateTime;
+        //}
 
-        public Booking()
-        {
+        //public Booking()
+        //{
 
-        }
+        //}
     }
 }

@@ -10,12 +10,16 @@
         <form method="post">
             <input asp-for=@Model.BlogPost.Id type="hidden" />
             <div class="form-group">
-                <label asp-for="@Model.BlogPost.Name"></label>
-                <input asp-for="@Model.BlogPost.Name" />
+                <label asp-for="@Model.BlogPost.Title" class="control-label"></label>
+                <input asp-for="@Model.BlogPost.Title" class="form-control" />
             </div>
             <div class="form-group">
-                <label asp-for="@Model.BlogPost.Description"></label>
-                <input asp-for="@Model.BlogPost.Description" />
+                <label asp-for="@Model.BlogPost.Author" class="control-label"></label>
+                <input asp-for="@Model.BlogPost.Author" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.BlogPost.Description" class="control-label"></label>
+                <input asp-for="@Model.BlogPost.Description" class="form-control" />
             </div>
             <input type="submit" value="Delete" class="btn btn-primary" />
             <a asp-page="Index">Cancel</a>

@@ -2,6 +2,8 @@
 @model Project22GR2.Pages.Boats.IndexModel
 @using Project22GR2.Models
 @using Project22GR2.Interfaces
+@using Project22GR2.Services
+@inject LoginService LoginService
 @inject IBoatRepository repo
 @{
     ViewData["Title"] = "Boats";
@@ -17,6 +19,7 @@
 
 </form>
 <a asp-page="CreateBoat">Create a new Boat</a>
+<a asp-page="Bookings">Booked Boats</a>
 
 <table class="table">
     <thead>
@@ -40,10 +43,20 @@
                 <td>@item.Width</td>
                 <td>@item.Weight</td>
                 <td>@item.Sail</td>
-                <td>
-                    <a asp-page="EditBoat" asp-route-id=@item.Id>Edit</a>|
-                    <a asp-page="DeleteBoat" asp-route-id=@item.Id>Delete</a>
-                </td>
+                @if (LoginService.IsLoggedMemberAdmin())
+                {
+                    <td>
+                        <a asp-page="EditBoat" asp-route-id=@item.Id>Edit</a> |
+                        <a asp-page="DeleteBoat" asp-route-id=@item.Id>Delete</a> |
+                        <a asp-page="Booking" asp-route-id=@item.Id>Book Boat</a>
+                    </td>
+                }
+                else if (LoginService.GetLoggedMember() != null)
+                {
+                    <td>
+                        <a asp-page="Booking" asp-route-id=@item.Id>Book Boat</a>
+                    </td>
+                }
             </tr>
 
 

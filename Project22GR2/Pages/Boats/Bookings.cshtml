@@ -1,0 +1,30 @@
+﻿@page
+@model Project22GR2.Pages.Boats.BookingsModel
+@{
+    ViewData["Title"] = "Booked Boats";
+}
+
+<h1>
+    List of Boats
+</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Member Id</th>
+            <th>Boat Id</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Bookings)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.MemberId</td>
+                <td>@item.BoatId</td>
+                <td>@item.DateTime</td>
+            </tr>
+        }
+    </tbody>
+</table>

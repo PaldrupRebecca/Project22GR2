@@ -9,7 +9,6 @@
   <ItemGroup>
     <Folder Include="wwwroot\Images\EventImages\" />
     <Folder Include="wwwroot\Images\BoatImages\" />
-    <Folder Include="wwwroot\Images\BlogImages\" />
     <Folder Include="wwwroot\Images\HomePageImages\" />
     <Folder Include="wwwroot\Images\MemberImages\" />
     <Folder Include="wwwroot\Images\EmployeeImages\" />

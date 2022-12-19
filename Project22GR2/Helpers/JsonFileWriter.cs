@@ -75,23 +75,8 @@ namespace Project22GR2.Helpers
             }
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         // Daniel
-        public static void WriteToJsonBlogPost(List<BlogPost> BlogPost, string jsonFileName)
+        public static void WriteToJsonBlogPost(List<BlogPost> blogPost, string jsonFileName)
         {
             using (FileStream outputStream = File.Create(jsonFileName))
             {
@@ -100,7 +85,7 @@ namespace Project22GR2.Helpers
                     SkipValidation = false,
                     Indented = true
                 });
-                JsonSerializer.Serialize<BlogPost[]>(writer, BlogPost.ToArray());
+                JsonSerializer.Serialize<BlogPost[]>(writer, blogPost.ToArray());
             }
         }
         //Rebecca 
