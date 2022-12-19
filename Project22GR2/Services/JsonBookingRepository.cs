@@ -27,7 +27,6 @@ namespace Project22GR2.Services
             {
                 booking.Id = 1;
             }
-            bookings.Add(booking);
             JsonFileWriter.WriteToJsonBookings(bookings, jsonFileName);
         }
 
