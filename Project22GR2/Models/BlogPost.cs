@@ -4,14 +4,15 @@ namespace Project22GR2.Models
 {
     public class BlogPost
     {
-        [Required(ErrorMessage = "Must contain a title")]
+        [Required(ErrorMessage = "Must contain a Title")]
         public string Title { get; set; }
         public int Id { get; set; }
-        [Required(ErrorMessage = "Name of author required")]
+        //[Display(Author = "Name")] for at vise Name istedet for Author.
+        [Required(ErrorMessage = "Name of Author required")]
         public string Author { get; set; }
-        [Required(ErrorMessage = "Blog Posts must contain a description")]
+        [Required(ErrorMessage = "Blog Posts must contain a Description")]
         public string Description { get; set; }
-        [Required(ErrorMessage = "Blog Posts must contain content")]
+        [Required(ErrorMessage = "Blog Posts must contain Content")]
         public string Content { get; set; }
         public DateTime DateTime { get; set; }
         public string BlogPostImage { get; set; }
