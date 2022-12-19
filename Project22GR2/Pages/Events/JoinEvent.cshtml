@@ -11,7 +11,13 @@
     <h5>Price: @Model.Event.Price kr</h5>
     <h5>When: @Model.Event.DateTime</h5>
     <form method="post">
+        <input asp-for="@Model.Event.Name" type="hidden" />
         <input asp-for="@Model.Event.Id" type="hidden" />
+        <div class="form-group">
+            <label asp-for="@Model.JoinEvent.EventDate" class="control-label"></label>
+            <input asp-for="@Model.JoinEvent.EventDate" class="control-label" />
+            <span asp-validation-for="JoinEvent.EventDate" class="text-danger"></span>
+        </div>
         <input type="submit" value="Join event" class="btn btn-primary" />
         <a asp-page="Index" class="btn btn-primary">Cancel</a>
     </form>

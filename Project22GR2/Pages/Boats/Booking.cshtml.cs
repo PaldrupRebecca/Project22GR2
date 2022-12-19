@@ -42,6 +42,8 @@ namespace Project22GR2.Pages.Boats
         {
             Booking.MemberId = _loginService.GetLoggedMember().Id;
             Booking.BoatId = Boat.Id;
+            Booking.MemberName = _loginService.GetLoggedMember().Name;
+            Booking.BoatType = Boat.Type;
             _bookingRepository.AddBooking(Booking);
             return RedirectToPage("Index");
         }

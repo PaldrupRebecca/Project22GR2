@@ -14,5 +14,13 @@
     "Width": 15,
     "Weight": 25,
     "Sail": "t"
+  },
+  {
+    "Id": 21,
+    "Type": "55",
+    "Length": 66,
+    "Width": 77,
+    "Weight": 24,
+    "Sail": "99"
   }
 ]
