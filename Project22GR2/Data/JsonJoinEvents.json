@@ -28,5 +28,10 @@
     "Id": 6,
     "MemberId": 1,
     "EventId": 0
+  },
+  {
+    "Id": 7,
+    "MemberId": 6,
+    "EventId": 5
   }
 ]
