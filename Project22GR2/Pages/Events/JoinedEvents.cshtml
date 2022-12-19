@@ -11,7 +11,10 @@
         <tr>
             <th>Id</th>
             <th>Member id</th>
+            <th>Member name</th>
             <th>Event id</th>
+            <th>Event name</th>
+            <th>Event time</th>
         </tr>
     </thead>
     <tbody>
@@ -20,8 +23,10 @@
             <tr>
                 <td>@item.Id</td>
                 <td>@item.MemberId</td>
+                <td>@item.MemberName</td>
                 <td>@item.EventId</td>
-                <td><a asp-page="SeeEvent" asp-route-id=@item.Id>View</a></td>
+                <td>@item.EventName</td>
+                <td>@item.EventDate</td>
 @*                <td>
                     <a asp-page="EditEvent" asp-route-id=@item.Id>Edit</a> |
                     <a asp-page="DeleteEvent" asp-route-id=@item.Id>Delete</a> |

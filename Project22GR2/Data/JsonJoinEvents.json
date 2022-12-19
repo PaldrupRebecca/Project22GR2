@@ -2,36 +2,89 @@
   {
     "Id": 1,
     "MemberId": 6,
-    "EventId": 1
+    "MemberName": null,
+    "EventId": 1,
+    "EventName": null,
+    "EventDate": "0001-01-01T00:00:00"
   },
   {
     "Id": 2,
     "MemberId": 6,
-    "EventId": 1
+    "MemberName": null,
+    "EventId": 1,
+    "EventName": null,
+    "EventDate": "0001-01-01T00:00:00"
   },
   {
     "Id": 3,
     "MemberId": 1,
-    "EventId": 1
+    "MemberName": null,
+    "EventId": 1,
+    "EventName": null,
+    "EventDate": "0001-01-01T00:00:00"
   },
   {
     "Id": 4,
     "MemberId": 1,
-    "EventId": 0
+    "MemberName": null,
+    "EventId": 0,
+    "EventName": null,
+    "EventDate": "0001-01-01T00:00:00"
   },
   {
     "Id": 5,
     "MemberId": 1,
-    "EventId": 0
+    "MemberName": null,
+    "EventId": 0,
+    "EventName": null,
+    "EventDate": "0001-01-01T00:00:00"
   },
   {
     "Id": 6,
     "MemberId": 1,
-    "EventId": 0
+    "MemberName": null,
+    "EventId": 0,
+    "EventName": null,
+    "EventDate": "0001-01-01T00:00:00"
   },
   {
     "Id": 7,
-    "MemberId": 6,
-    "EventId": 5
+    "MemberId": 1,
+    "MemberName": null,
+    "EventId": 0,
+    "EventName": null,
+    "EventDate": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 8,
+    "MemberId": 1,
+    "MemberName": "Test",
+    "EventId": 1,
+    "EventName": null,
+    "EventDate": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 9,
+    "MemberId": 1,
+    "MemberName": "Test",
+    "EventId": 1,
+    "EventName": "Test4",
+    "EventDate": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 10,
+    "MemberId": 1,
+    "MemberName": "Test",
+    "EventId": 1,
+    "EventName": "Test4",
+    "EventDate": "2022-12-31T12:27:00"
+  },
+  {
+    "Id": 11,
+    "MemberId": 1,
+    "MemberName": "Test",
+    "EventId": 1,
+    "EventName": "Test4",
+    "EventDate": "2022-12-29T13:04:00"
   }
 ]

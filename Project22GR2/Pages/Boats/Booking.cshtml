@@ -13,6 +13,13 @@
     <h5>Sail: @Model.Boat.Sail</h5>
     <form method="post">
         <input asp-for="@Model.Boat.Id" type="hidden" />
+        <input asp-for="@Model.Boat.Type" type="hidden" />
+        <div class="form-group">
+            <label asp-for="@Model.Booking.DateTime" class="control-label"></label>
+            <input asp-for="@Model.Booking.DateTime" class="control-label" />
+            <span asp-validation-for="Booking.DateTime" class="text-danger"></span>
+        </div>
+
         <input type="submit" value="Book boat" class="btn btn-primary" />
         <a asp-page="Index" class="btn btn-primary">Cancel</a>
     </form>

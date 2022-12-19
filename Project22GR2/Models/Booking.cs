@@ -10,8 +10,11 @@ namespace Project22GR2.Models
         [Required]
         public int BoatId { get; set; }
         
+        public string BoatType { get; set; }
         [Required]
         public int MemberId { get; set; }
+
+        public string MemberName { get; set; }
 
         [Required]
         public DateTime DateTime { get; set; }
