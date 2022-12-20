@@ -12,14 +12,13 @@
     "Description": "The event that\u0027ll be held",
     "DateTime": "2022-12-23T16:57:00",
     "Price": 125
-<<<<<<< HEAD
-  {,
+  },
+  {
     "Id": 1,
     "Name": "2",
     "Description": "3",
     "DateTime": "2022-12-20T09:12:00",
     "Price": 2
-=======
   },
   {
     "Id": 1,
@@ -27,6 +26,5 @@
     "Description": "1",
     "DateTime": "2022-12-24T09:10:00",
     "Price": 1
->>>>>>> b7b6cc8a6f9d5ae6f4ce0f08f4b11b2deefd181d
   }
 ]
