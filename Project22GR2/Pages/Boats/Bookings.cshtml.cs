@@ -22,9 +22,15 @@ namespace Project22GR2.Pages.Boats
             _loginService = loginService;
         }
 
-        public void OnGet()
+        public IActionResult OnGet()
         {
-            Bookings = _bookingRepository.FilterBooking(_loginService.GetLoggedMember().Id);
+            if (_loginService.GetLoggedMember() == null)
+                return RedirectToPage("/Members/Login");
+            else
+            {
+                Bookings = _bookingRepository.FilterBooking(_loginService.GetLoggedMember().Id);
+                return Page();
+            }
         }
         public void OnPost()
         {

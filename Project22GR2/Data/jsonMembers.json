@@ -70,5 +70,13 @@
     "Address": "1",
     "Email": "1",
     "IsAdmin": false
+  },
+  {
+    "Password": "1",
+    "Id": 1,
+    "Name": "1",
+    "Address": "1",
+    "Email": "1",
+    "IsAdmin": false
   }
 ]
