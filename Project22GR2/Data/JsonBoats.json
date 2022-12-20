@@ -22,5 +22,13 @@
     "Width": 77,
     "Weight": 24,
     "Sail": "99"
+  },
+  {
+    "Id": 1,
+    "Type": "1",
+    "Length": 1,
+    "Width": 1,
+    "Weight": 1,
+    "Sail": "1"
   }
 ]

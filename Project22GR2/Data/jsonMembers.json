@@ -72,11 +72,11 @@
     "IsAdmin": false
   },
   {
-    "Password": "5",
+    "Password": "1",
     "Id": 1,
-    "Name": "2",
-    "Address": "3",
-    "Email": "4",
+    "Name": "1",
+    "Address": "1",
+    "Email": "1",
     "IsAdmin": false
   }
 ]

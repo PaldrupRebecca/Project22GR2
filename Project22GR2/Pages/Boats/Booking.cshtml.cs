@@ -34,8 +34,8 @@ namespace Project22GR2.Pages.Boats
 
         public void OnGet(int id)
         {
-            Member = _loginService.GetLoggedMember();
-            Boat = _boatRepository.GetBoat(id);
+                Member = _loginService.GetLoggedMember();
+                Boat = _boatRepository.GetBoat(id);
         }
 
         public IActionResult OnPost()

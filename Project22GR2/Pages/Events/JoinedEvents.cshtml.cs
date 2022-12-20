@@ -21,9 +21,15 @@ namespace Project22GR2.Pages.Events
             _jRepo = joinEventRepository;
             _loginService = loginservice;
         }
-        public void OnGet()
+        public IActionResult OnGet()
         {
-            JoinEvents = _jRepo.FilterJoinEvents(_loginService.GetLoggedMember().Id);
+            if (_loginService.GetLoggedMember() == null)
+                return RedirectToPage("/Members/Login");
+            else
+            {
+                JoinEvents = _jRepo.FilterJoinEvents(_loginService.GetLoggedMember().Id);
+                return Page();
+            }
         }
 
         public void OnPost()

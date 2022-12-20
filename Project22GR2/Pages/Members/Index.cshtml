@@ -17,8 +17,13 @@
         <input type="submit" value="Search" />
     </p>
 </form>
+@if (LoginService.IsLoggedMemberAdmin())
+{
+    <td>
+        <a asp-page="CreateMember">Create a new member</a>
+    </td>
+}
 
-<a asp-page="CreateMember">Create a new member</a>
 
 <table class="table">
     <thead>
